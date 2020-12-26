@@ -1,7 +1,21 @@
 import React, { useEffect, useRef } from 'react';
+import { AiOutlineInstagram, AiFillLinkedin, AiOutlineMail } from 'react-icons/ai'
+import { Link, animateScroll as scroll } from 'react-scroll';
 import lottie from  'lottie-web';
 
-import { Container, Header, BoxFetch, Title, Paragraph, ContainerText } from './styles';
+import { 
+  Container, 
+  Header, 
+  BoxFetch, 
+  Title, 
+  Subtitle, 
+  Paragraph, 
+  ContainerText, 
+  Footer, 
+  FooterText,
+  Name,
+  AvatarImage
+} from './styles/styles';
 
 function App() {
   
@@ -13,7 +27,7 @@ function App() {
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      animationData: require('./files/18123-developer.json')
+      animationData: require('../files/18123-developer.json')
     });
   });
 
@@ -23,16 +37,20 @@ function App() {
         <button>Resumo</button>
         <button>Experiências</button>
         <button>Estudos</button>
+        <button>Contato</button>
+        <div>
+          <AvatarImage>
+            <image src={require('../files/avatarProfile.jpg')} />
+          </AvatarImage>
+          <Name>Murilo Lodovico</Name>
+        </div>
       </Header>
       
       <BoxFetch>
         <ContainerText>
           <Title>Desenvolvedor de Software</Title>
           <div className="lottie1" ref={lottiefile1} />
-
-
-
-          <Title>Resumo</Title>
+          <Subtitle>Resumo</Subtitle>
             <Paragraph>
                 Lorem ipsum dolor sit amet consectetur adipiscing elit tempus, 
               vulputate velit et vehicula nunc auctor suspendisse felis, 
@@ -40,19 +58,25 @@ function App() {
                Montes potenti congue ipsum vehicula habitant tincidunt mollis rhoncus odio iaculis, 
               orci lectus tortor volutpat ante blandit neque dictum efficitur, 
               penatibus primis pulvinar facilisi parturient tempus vivamus placerat suscipit.
-               Velit platea conubia sem curabitur mauris curae laoreet congue,
-              nostra sociosqu himenaeos dui lectus tempus porta ligula sagittis, 
-              placerat sed purus ultricies dignissim pellentesque nam. 
-                Fermentum nunc quis aenean porta aptent nostra penatibus adipiscing sed ornare, 
-              nibh molestie eros primis tristique senectus tellus cursus eget, 
-              quam tempus iaculis sagittis placerat hendrerit nullam sapien congue metus, 
-              interdum morbi ridiculus tincidunt laoreet sociosqu phasellus habitasse.
-               Ultricies ante quis erat euismod habitasse suspendisse facilisi himenaeos cursus, 
-              dignissim venenatis dictumst nibh mauris maximus integer nam mi, 
-              netus faucibus quam malesuada laoreet tortor dui duis.
+               Velit platea conubia sem curabitur mauris curae 
              </Paragraph>
+            <Subtitle>Experiências</Subtitle>
         </ContainerText>
       </BoxFetch>
+      <Footer>
+        <FooterText>
+          <AiOutlineInstagram />
+          mlodovico
+        </FooterText>
+        <FooterText>
+          <AiFillLinkedin />
+          Murilo Lodovico
+        </FooterText>
+        <FooterText>
+          <AiOutlineMail />
+          murilo.lodovico@outlook.com
+        </FooterText>
+      </Footer>
     </Container>
   );
 }

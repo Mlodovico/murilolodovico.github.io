@@ -40,6 +40,17 @@ export const Header = styled.header`
   }
 `;
 
+export const Name = styled.p`
+  font-family: 'Roboto-regular', sans-serif;
+  font-size: 14px;
+`;
+export const AvatarImage = styled.div`
+  width: 10%;
+  height: 10%;
+
+  background-color: #D3D3D3;
+  `;
+
 export const BoxFetch = styled.div`
   width: 60%;
   height: 90%;
@@ -48,8 +59,8 @@ export const BoxFetch = styled.div`
   border-radius: 8px;
   margin-bottom: 40px;
   padding: 20px 20px;
-  margin: 20px 400px;
-
+  margin: 0 auto;
+  margin-top: 20px;
 `;
 
 export const ContainerText = styled.div`
@@ -58,11 +69,10 @@ export const ContainerText = styled.div`
 
   .lottie1 {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 
-    width: 500px;
-    height: 500px;
+    width: 90%;
+    height: 90%;
   }
 `;
 
@@ -71,8 +81,20 @@ export const Title = styled.div`
   width: 100%;
 
   font-family: 'Roboto-Medium', sans-serif;
+  text-align: center;
   color: #282c34;
   font-size: 25px;
+  font-weight: bold;
+`;
+
+export const Subtitle = styled.div`
+  display: flex;
+  width: 100%;
+
+  font-family: 'Roboto-Medium', sans-serif;
+  text-align: center;
+  color: #282c34;
+  font-size: 20px;
   font-weight: bold;
 `;
 
@@ -82,4 +104,21 @@ export const Paragraph = styled.p`
   font-family: 'Roboto-Medium', sans-serif;
   color: #282c34;
   font-size: 19px;
+`;
+
+export const Footer = styled.footer`
+  position: fixed;
+  left: 0;
+  bottom 0;
+  width: 100%;
+  height: 50px;
+  background-color: #D3D3D3;
+  text-align: center;
+  `;
+
+export const FooterText = styled.p`
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto-regular', sans-serif;
+  font-size: 13px;
 `;
